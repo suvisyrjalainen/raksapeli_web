@@ -1,0 +1,23 @@
+{
+  "name": "raksapeli_web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suvisyrjalainen/raksapeli_web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suvisyrjalainen/raksapeli_web/issues"
+  },
+  "homepage": "https://github.com/suvisyrjalainen/raksapeli_web#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
