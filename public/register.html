@@ -17,13 +17,13 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script src="./js/loginValidation.js"></script>
+    <script src="./js/registerValidation.js"></script>
 
 
   </head>
   <body>
     <div class="container">
-    <h1>Kirjaudu sisään</h1>
+    <h1>Rekisteröidy</h1>
 
     <form>
       <div class="form-group">
@@ -38,8 +38,11 @@
           <label for="password">Salasana:</label>
           <input type="password" class="form-control" id="password">
       </div>
-      <a href="./register.html" class="stretched-link">Klikkaa tästä jos sinulla ei ole tiliä</a><br><br>
-      <button onclick="send_loginData();" type="button" class="btn btn-info">Lähetä</button>
+        <div class="form-group">
+            <label for="passwordConfir">Salasana uudellleen:</label>
+            <input type="password" class="form-control" id="passwordConfir">
+        </div>
+      <button onclick="send_registerData();" type="button" class="btn btn-info">Lähetä</button>
     </form>
   </div>
 
