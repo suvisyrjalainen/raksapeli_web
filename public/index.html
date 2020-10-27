@@ -24,22 +24,20 @@
   <body>
     <div class="container">
     <h1>Kirjaudu sisään</h1>
-
-    <form>
+    <form method="post">
       <div class="form-group">
           <label for="name">Nimi:</label>
-          <input type="text" class="form-control" id="name">
+          <input type="text" class="form-control" id="name" required>
       </div>
       <div class="form-group">
         <label for="email">Sähköposti:</label>
-        <input type="email" class="form-control" id="email">
+        <input type="email" class="form-control" id="email" required>
       </div>
       <div class="form-group">
           <label for="password">Salasana:</label>
-          <input type="password" class="form-control" id="password">
+          <input type="password" class="form-control" id="password" required>
       </div>
-      <a href="./register.html" class="stretched-link">Klikkaa tästä jos sinulla ei ole tiliä</a><br><br>
-      <button onclick="send_loginData();" type="button" class="btn btn-info">Lähetä</button>
+      <button onclick="send_loginData();" type="submit" class="btn btn-info">Lähetä</button>
     </form>
   </div>
 
