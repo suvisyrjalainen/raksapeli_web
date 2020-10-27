@@ -14,6 +14,6 @@ function send_registerData(){
 
     console.log(name);
     console.log(email);
-    console.log(validate)
+    console.log(validate())
 
 }
