@@ -1,50 +1,57 @@
 import React, {Component} from 'react';
 
 class Form extends Component {
-  initialState = {
-    name: '',
-    password: '',
-  }
+    constructor(props) {
+        super(props);
 
-  handleChange = (event) => {
-    const {name, value} = event.target;
+        this.initialState = {
+            name: '',
+            password: ''
+        };
 
-    this.setState({
-      [name]: value,
-    });
-  }
+        this.state = this.initialState;
+    }
 
-  submitForm = () => {
-    this.props.handleSubmit(this.state);
-    this.setState(this.initialState);
-  }
+    handleChange = event => {
+        const { name, value } = event.target;
 
-  render() {
-    const { name, password } = this.state;
+        this.setState({
+            [name] : value
+        });
+    }
 
-    return(
-      <form>
-        <label htmlFor="name">Nimi</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          value={name}
-          onChange={this.handleChange} />
-          <label htmlFor="password">Salasana</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            value={password}
-            onChange={this.handleChange} />
+    onFormSubmit = (event) => {
+        event.preventDefault();
 
-            <input type="button" value="Submit" onClick={this.submitForm} />
-      </form>
-    );
-  }
-  
-  state = this.initialState
+        this.props.handleSubmit(this.state);
+        this.setState(this.initialState);
+    }
+
+    render() {
+        const { name, job } = this.state;
+
+        return (
+            <form onSubmit={this.onFormSubmit}>
+                <label for="name">Name</label>
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    value={name}
+                    onChange={this.handleChange} />
+                <label for="job">Password</label>
+                <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    value={job}
+                    onChange={this.handleChange} />
+                <button type="submit">
+                    Submit
+                </button>
+            </form>
+        );
+    }
 }
 
-export default './Form';
+export default Form;
