@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 
+
 class Form extends Component {
     constructor(props) {
         super(props);
@@ -28,10 +29,11 @@ class Form extends Component {
     }
 
     render() {
-        const { name, job } = this.state;
+        const { name, password } = this.state;
 
         return (
-            <form onSubmit={this.onFormSubmit}>
+            <form onSubmit={this.onFormSubmit} method="POST">
+                <h1>kirjaudu</h1>
                 <label for="name">Name</label>
                 <input
                     type="text"
@@ -39,12 +41,12 @@ class Form extends Component {
                     id="name"
                     value={name}
                     onChange={this.handleChange} />
-                <label for="job">Password</label>
+                <label for="password">Password</label>
                 <input
                     type="password"
                     name="password"
                     id="password"
-                    value={job}
+                    value={password}
                     onChange={this.handleChange} />
                 <button type="submit">
                     Submit
