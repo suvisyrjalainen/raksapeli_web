@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import Form from './Form';
+import Login from './Login';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { apiResponse: "",
-                    characters: []
-                  };
+    this.state = { apiResponse: ""};
   }
 
   callAPI() {
@@ -22,23 +26,72 @@ class App extends Component {
 
 
 
-
-
-    handleSubmit = character => {
-        this.setState({characters: [...this.state.characters, character]});
-    }
-
     render() {
 
 
         return (
           <div>
-                <Form handleSubmit={this.handleSubmit} />
-                <p className="App-intro apitestcolor">{this.state.apiResponse}</p>
-          </div>
+          <Router>
+            <div>
+              <ul>
+                <li>
+                  <Link to="/">Login</Link>
+                </li>
+                <li>
+                  <Link to="/game">Game</Link>
+                </li>
+                <li>
+                  <Link to="/about">About</Link>
+                </li>
 
+              </ul>
+
+              <Switch>
+                <Route path="/about">
+                  <About />
+                </Route>
+                <Route path="/game">
+                  <Game />
+                </Route>
+                <Route path="/">
+                  <Login_page />
+                </Route>
+              </Switch>
+            </div>
+          </Router>
+
+
+
+          </div>
         );
     }
+}
+
+function Login_page() {
+  return (
+    <div>
+      <h2>Login</h2>
+      <div>
+            <Login/>
+      </div>
+    </div>
+  );
+}
+
+function Game() {
+  return (
+    <div>
+      <h2>Game</h2>
+    </div>
+  );
+}
+
+function About() {
+  return (
+    <div>
+      <h2>About</h2>
+    </div>
+  );
 }
 
 export default App;
