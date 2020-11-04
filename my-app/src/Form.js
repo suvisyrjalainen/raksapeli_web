@@ -32,26 +32,36 @@ class Form extends Component {
         const { name, password } = this.state;
 
         return (
-            <form onSubmit={this.onFormSubmit} method="POST">
-                <h1>kirjaudu</h1>
-                <label for="name">Name</label>
-                <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    value={name}
-                    onChange={this.handleChange} />
-                <label for="password">Password</label>
-                <input
-                    type="password"
-                    name="password"
-                    id="password"
-                    value={password}
-                    onChange={this.handleChange} />
-                <button type="submit">
-                    Submit
-                </button>
-            </form>
+            <div class="login-box">
+                <form onSubmit={this.onFormSubmit} method="POST">
+                    <div class="row">
+                    <h1>kirjaudu</h1>
+                        <div class="user-box">
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                placeholder="name.."
+                                value={name}
+                                onChange={this.handleChange} />
+                        </div>
+                        <div class="user-box">
+                            <input
+                                type="password"
+                                name="password"
+                                id="password"
+                                placeholder="Password.." 
+                                value={password}
+                                onChange={this.handleChange} />
+                        </div>
+                            <div class="row">
+                                <button type="submit" class="btn btn-primary btn-ghost">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                </form>
+            </div>
         );
     }
 }
