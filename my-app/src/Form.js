@@ -59,7 +59,7 @@ class Form extends Component {
                             <div class="row">
                                 <Link to="/game">
                                     <button type="submit" class="btn btn-primary btn-ghost">
-                                        Submit
+                                        kirjaudu sisään
                                     </button>
                                 </Link>
                             </div>
