@@ -35,7 +35,7 @@ class Form extends Component {
             <div class="login-box">
                 <form onSubmit={this.onFormSubmit} method="POST">
                     <div class="row">
-                    <h1>kirjaudu</h1>
+                        <h1>Kirjaudu</h1>
                         <div class="user-box">
                             <input
                                 type="text"
@@ -56,14 +56,14 @@ class Form extends Component {
                                 onChange={this.handleChange} 
                                 required/>
                         </div>
-                            <div class="row">
-                                <Link to="/game">
-                                    <button type="submit" class="btn btn-primary btn-ghost">
-                                        kirjaudu sisään
-                                    </button>
-                                </Link>
-                            </div>
+                        <div class="row">
+                            <Link to="/game">
+                                <button type="submit" class="btn btn-primary btn-ghost">
+                                    kirjaudu sisään
+                                </button>
+                            </Link>
                         </div>
+                    </div>
                 </form>
             </div>
         );

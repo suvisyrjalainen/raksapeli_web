@@ -70,7 +70,6 @@ class App extends Component {
 function Login_page() {
   return (
     <div>
-      <h2>Login</h2>
       <div>
             <Login/>
       </div>
