@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Redirect, useLocation } from "react-router-dom";
+import { Link, Redirect, useLocation } from "react-router-dom";
 
 class Form extends Component {
     constructor(props) {
@@ -43,7 +43,8 @@ class Form extends Component {
                                 id="name"
                                 placeholder="name.."
                                 value={name}
-                                onChange={this.handleChange} />
+                                onChange={this.handleChange} 
+                                required/>
                         </div>
                         <div class="user-box">
                             <input
@@ -52,12 +53,15 @@ class Form extends Component {
                                 id="password"
                                 placeholder="Password.." 
                                 value={password}
-                                onChange={this.handleChange} />
+                                onChange={this.handleChange} 
+                                required/>
                         </div>
                             <div class="row">
-                                <button type="submit" class="btn btn-primary btn-ghost">
-                                    Submit
-                                </button>
+                                <Link to="/game">
+                                    <button type="submit" class="btn btn-primary btn-ghost">
+                                        Submit
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                 </form>
