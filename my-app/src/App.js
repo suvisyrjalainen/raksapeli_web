@@ -31,6 +31,9 @@ class App extends Component {
 
         return (
           <div>
+            <header>
+              <h1>Rakennusopetus peli</h1>
+            </header>
           <Router>
             <div>
               <ul>
@@ -60,8 +63,10 @@ class App extends Component {
             </div>
           </Router>
 
-
-
+          <footer>
+            <div class="footer">
+            </div>
+          </footer>
           </div>
         );
     }
@@ -80,7 +85,7 @@ function Login_page() {
 function Game() {
   return (
     <div>
-      <h2>Game</h2>
+      <h2>This is game scene</h2>
     </div>
   );
 }
