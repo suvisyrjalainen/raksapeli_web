@@ -31,9 +31,6 @@ class App extends Component {
 
         return (
           <div>
-            <header>
-              <h1>Rakennusopetus peli</h1>
-            </header>
           <Router>
             <div>
               <ul>
