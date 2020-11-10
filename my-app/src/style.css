@@ -3,12 +3,17 @@ body {
   margin: 0;
 }
 
+header {
+  text-align: center;
+  height: 100px;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 10;
   overflow: hidden;
-  background-color: lightskyblue;
+  background-color: #A7A7A7;
 }
 
 li {
@@ -23,9 +28,19 @@ li a {
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
-  background-color: lightblue;
+  background-color: rgb(114, 112, 112);
+}
+
+/*about scene*/
+.about {
+  text-align: center;
+}
+
+
+/*game scene*/
+.game {
+  text-align: center;
 }
 
 .login-box {

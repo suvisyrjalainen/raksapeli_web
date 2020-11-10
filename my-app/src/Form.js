@@ -44,7 +44,7 @@ class Form extends Component {
                                 placeholder="name.."
                                 value={name}
                                 onChange={this.handleChange} 
-                                required/>
+                                required />
                         </div>
                         <div class="user-box">
                             <input
@@ -54,12 +54,12 @@ class Form extends Component {
                                 placeholder="Password.." 
                                 value={password}
                                 onChange={this.handleChange} 
-                                required/>
+                                required />
                         </div>
                         <div class="row">
                             <Link to="/game">
                                 <button type="submit" class="btn btn-primary btn-ghost">
-                                    kirjaudu sisään
+                                    Kirjaudu sisään
                                 </button>
                             </Link>
                         </div>
