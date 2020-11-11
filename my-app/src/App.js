@@ -6,6 +6,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import RegisterForm from './RegisterForm';
 
 class App extends Component {
   constructor(props) {
@@ -41,6 +42,9 @@ class App extends Component {
                   <Link to="/">Login</Link>
                 </li>
                 <li>
+                  <Link to="/registerpage">Register page</Link>
+                </li>
+                <li>
                   <Link to="/game">Game</Link>
                 </li>
                 <li>
@@ -56,6 +60,9 @@ class App extends Component {
                 <Route path="/game">
                   <Game />
                 </Route>
+                <Route path="/registerpage">
+                  <Register_page />
+                </Route>
                 <Route path="/">
                   <Login_page />
                 </Route>
@@ -70,6 +77,14 @@ class App extends Component {
           </div>
         );
     }
+}
+
+function Register_page() {
+  return (
+    <div>
+      <RegisterForm />
+    </div>
+  );
 }
 
 function Login_page() {

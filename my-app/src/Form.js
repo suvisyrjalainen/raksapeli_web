@@ -62,6 +62,12 @@ class Form extends Component {
                                     Kirjaudu sisään
                                 </button>
                             </Link>
+
+                            <Link to="registerpage">
+                                <button type="submit" class="btn btn-primary btn-ghost">
+                                    Rekisteröidy jos tiliä ei ole
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </form>
