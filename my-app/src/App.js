@@ -39,16 +39,16 @@ class App extends Component {
             <div>
               <ul>
                 <li>
-                  <Link to="/">Login</Link>
+                  <Link to="/">Kirjaudu</Link>
                 </li>
                 <li>
-                  <Link to="/registerpage">Register page</Link>
+                  <Link to="/registerpage">Rekisteröidy</Link>
                 </li>
                 <li>
-                  <Link to="/game">Game</Link>
+                  <Link to="/game">Peli</Link>
                 </li>
                 <li>
-                  <Link to="/about">About</Link>
+                  <Link to="/about">Tietoa meistä</Link>
                 </li>
 
               </ul>

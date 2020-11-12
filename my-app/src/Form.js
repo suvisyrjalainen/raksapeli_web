@@ -41,7 +41,7 @@ class Form extends Component {
                                 type="text"
                                 name="name"
                                 id="name"
-                                placeholder="name.."
+                                placeholder="Nimi"
                                 value={name}
                                 onChange={this.handleChange} 
                                 required />
@@ -51,7 +51,7 @@ class Form extends Component {
                                 type="password"
                                 name="password"
                                 id="password"
-                                placeholder="Password.." 
+                                placeholder="Salasana" 
                                 value={password}
                                 onChange={this.handleChange} 
                                 required />

@@ -91,7 +91,7 @@ class RegisterForm extends React.Component {
   render() {
     return (
       <div class="register">
-        <h1>Register</h1>
+        <h1>Rekisteröidy</h1>
         <form onSubmit={this.handleSubmit}>
   
           <div class="form-group">
@@ -101,7 +101,7 @@ class RegisterForm extends React.Component {
               value={this.state.input.name}
               onChange={this.handleChange}
               class="form-control" 
-              placeholder="Enter name" 
+              placeholder="Nimi" 
               id="name" />
   
               <div className="text-danger">{this.state.errors.name}</div>
@@ -114,7 +114,7 @@ class RegisterForm extends React.Component {
               value={this.state.input.email}
               onChange={this.handleChange}
               class="form-control" 
-              placeholder="Enter email" 
+              placeholder="Sähköposti" 
               id="email" />
   
               <div className="text-danger">{this.state.errors.email}</div>
@@ -127,7 +127,7 @@ class RegisterForm extends React.Component {
               value={this.state.input.password}
               onChange={this.handleChange}
               class="form-control" 
-              placeholder="Enter password" 
+              placeholder="Salasana" 
               id="password" />
   
               <div className="text-danger">{this.state.errors.password}</div>
@@ -140,14 +140,14 @@ class RegisterForm extends React.Component {
               value={this.state.input.confirm_password}
               onChange={this.handleChange}
               class="form-control" 
-              placeholder="Enter confirm password" 
+              placeholder="Salasana uudelleen" 
               id="confirm_password" />
   
               <div className="text-danger">{this.state.errors.confirm_password}</div>
           </div>
             <Link to="game">
                 <button type="submit" value="Submit" class="btn btn-success">
-                    Register
+                    Rekisteröidy
                 </button>
             </Link>  
 
