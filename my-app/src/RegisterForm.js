@@ -89,6 +89,7 @@ class RegisterForm extends React.Component {
   }
      
   render() {
+    
     return (
       <div class="register">
         <h1>Rekisteröidy</h1>
@@ -150,7 +151,6 @@ class RegisterForm extends React.Component {
                     Rekisteröidy
                 </button>
             </Link>  
-
         </form>
       </div>
     );
