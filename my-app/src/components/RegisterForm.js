@@ -75,7 +75,7 @@ class RegisterForm extends React.Component {
   
       if (typeof input["password"] !== "undefined" && typeof input["confirm_password"] !== "undefined") {
           
-        if (input["password"] != input["confirm_password"]) {
+        if (input["password"] !== input["confirm_password"]) {
           isValid = false;
           errors["password"] = "Passwords don't match.";
         }

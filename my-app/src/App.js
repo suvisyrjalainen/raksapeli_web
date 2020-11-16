@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import Login from './Login';
+import About from './components/About';
+import Game from './components/Game';
+import Login from './components/Login';
+import RegisterForm from './components/RegisterForm';
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
-import RegisterForm from './RegisterForm';
+
 
 class App extends Component {
   constructor(props) {
@@ -40,12 +44,6 @@ class App extends Component {
               <ul>
                 <li>
                   <Link to="/">Kirjaudu</Link>
-                </li>
-                <li>
-                  <Link to="/registerpage">Rekisteröidy</Link>
-                </li>
-                <li>
-                  <Link to="/game">Peli</Link>
                 </li>
                 <li>
                   <Link to="/about">Tietoa meistä</Link>
@@ -91,24 +89,24 @@ function Login_page() {
   return (
     <div>
       <div>
-            <Login/>
+          <Login/>
       </div>
     </div>
   );
 }
 
-function Game() {
+function Game_page() {
   return (
     <div class="game">
-      <h2>This is game scene</h2>
+      <Game />
     </div>
   );
 }
 
-function About() {
+function About_page() {
   return (
     <div class="about">
-      <h2>About</h2>
+      <About />
     </div>
   );
 }

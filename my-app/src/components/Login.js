@@ -1,35 +1,36 @@
 import React, {Component} from 'react';
-import { Link, Redirect, useLocation } from "react-router-dom";
+import {Link, Redirect, useLocation } from "react-router-dom";
 
-class Form extends Component {
-    constructor(props) {
-        super(props);
+class Login extends Component {
+  constructor(props) {
+    super(props);
+    
+    this.initialState = {
+      name: '',
+      password: ''
+  };
 
-        this.initialState = {
-            name: '',
-            password: ''
-        };
+  this.state = this.initialState;
+  }
 
-        this.state = this.initialState;
-    }
+  handleChange = event => {
+    const { name, value } = event.target;
 
-    handleChange = event => {
-        const { name, value } = event.target;
+    this.setState({
+        [name] : value
+    });
+}
 
-        this.setState({
-            [name] : value
-        });
-    }
+  onFormSubmit = (event) => {
+    event.preventDefault();
 
-    onFormSubmit = (event) => {
-        event.preventDefault();
+    this.props.handleSubmit(this.state);
+    this.setState(this.initialState);
+  }
 
-        this.props.handleSubmit(this.state);
-        this.setState(this.initialState);
-    }
 
-    render() {
-        const { name, password } = this.state;
+  render() {
+    const { name, password } = this.state;
 
         return (
             <div class="login-box">
@@ -74,6 +75,9 @@ class Form extends Component {
             </div>
         );
     }
+
+
+
 }
 
-export default Form;
+export default Login;
