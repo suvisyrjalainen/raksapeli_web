@@ -1,6 +1,6 @@
 import React from "react";
 import { Redirect, Route, useLocation } from "react-router-dom";
-import { fakeAuth } from "./Form";
+import { fakeAuth } from "./components/Login";
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const location = useLocation();
@@ -10,7 +10,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
       {fakeAuth.isAuthenticated === true ? (
         <Component />
       ) : (
-        <Redirect to={{ pathname: "/Form", state: { from: location } }} />
+        <Redirect to={{ pathname: "./components/Login", state: { from: location } }} />
       )}
     </Route>
   );

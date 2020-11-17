@@ -7,13 +7,15 @@ function Dashboard(props) {
   // handle click event of logout button
   const handleLogout = () => {
     removeUserSession();
-    props.history.push('/login');
+    props.history.push('./components/Login');
   }
 
   return (
     <div>
       Welcome {user.name}!<br /><br />
       <input type="button" onClick={handleLogout} value="Logout" />
+
+      <h2>This is the logged game scene</h2>
     </div>
   );
 }

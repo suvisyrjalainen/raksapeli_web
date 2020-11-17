@@ -24,7 +24,7 @@ class Login extends Component {
   onFormSubmit = (event) => {
     event.preventDefault();
 
-    this.props.handleSubmit(this.state);
+    this.props.onFormSubmit(this.state);
     this.setState(this.initialState);
   }
 
@@ -58,8 +58,8 @@ class Login extends Component {
                                 required />
                         </div>
                         <div class="row">
-                            <Link to="/game">
-                                <button type="submit" class="btn btn-primary btn-ghost">
+                            <Link to="game">
+                                <button type="submit" class="btn btn-primary btn-ghost" onSubmit={this.onFormSubmit}>
                                     Kirjaudu sisään
                                 </button>
                             </Link>
@@ -75,9 +75,6 @@ class Login extends Component {
             </div>
         );
     }
-
-
-
 }
 
 export default Login;
