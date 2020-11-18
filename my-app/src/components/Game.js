@@ -9,8 +9,11 @@ class Game extends Component {
 
     render() {
         return (
-            <div>
+            <div class="game">
                 <h2>Game scene</h2>
+                <div class="column">
+                    <p>gaming is fun</p>
+                </div>
             </div>
         );
     }
