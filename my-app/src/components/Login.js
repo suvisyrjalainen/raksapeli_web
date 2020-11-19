@@ -58,12 +58,14 @@ class Login extends Component {
                                 required />
                         </div>
                         <div class="row">
+                            <Link to="game">
                                 <button type="submit" class="btn btn-primary btn-ghost" onSubmit={this.onFormSubmit} value="submit">
                                     Kirjaudu sisään
                                 </button>
+                            </Link>
 
                             <Link to="registerpage">
-                                <button type="submit" class="btn btn-primary btn-ghost">
+                                <button type="submit" class="btn btn-primary btn-ghost" value="submit">
                                     Rekisteröidy jos tiliä ei ole
                                 </button>
                             </Link>
