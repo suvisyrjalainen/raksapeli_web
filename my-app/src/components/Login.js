@@ -11,6 +11,8 @@ class Login extends Component {
   };
 
   this.state = this.initialState;
+  this.handleSubmit = this.handleSubmit.bind(this);
+  this.input = React.createRef();
   }
 
   handleChange = event => {
@@ -21,11 +23,9 @@ class Login extends Component {
     });
 }
 
-  onFormSubmit = (event) => {
+  handleSubmit = (event) => {
+    alert('A name was submitted: ' + this.input.current.value);
     event.preventDefault();
-
-    this.props.onFormSubmit(this.state);
-    this.setState(this.initialState);
   }
 
 
@@ -58,11 +58,9 @@ class Login extends Component {
                                 required />
                         </div>
                         <div class="row">
-                            <Link to="game">
-                                <button type="submit" class="btn btn-primary btn-ghost" onSubmit={this.onFormSubmit}>
+                                <button type="submit" class="btn btn-primary btn-ghost" onSubmit={this.onFormSubmit} value="submit">
                                     Kirjaudu sisään
                                 </button>
-                            </Link>
 
                             <Link to="registerpage">
                                 <button type="submit" class="btn btn-primary btn-ghost">

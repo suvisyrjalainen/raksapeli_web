@@ -146,11 +146,9 @@ class RegisterForm extends React.Component {
   
               <div className="text-danger">{this.state.errors.confirm_password}</div>
           </div>
-            <Link to="game">
                 <button type="submit" value="Submit" class="btn btn-success">
                     Rekisteröidy
                 </button>
-            </Link>  
         </form>
       </div>
     );
