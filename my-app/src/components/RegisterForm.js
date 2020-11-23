@@ -87,7 +87,10 @@ class RegisterForm extends React.Component {
   
       return isValid;
   }
+  
      
+
+
   render() {
     
     return (
