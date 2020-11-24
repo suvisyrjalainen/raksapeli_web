@@ -6,26 +6,55 @@ class Login extends Component {
     super(props);
     
     this.initialState = {
-      name: '',
-      password: ''
-  };
+        input: {},
+        errors: {}
+    };
 
   this.state = this.initialState;
   this.handleSubmit = this.handleSubmit.bind(this);
-  this.input = React.createRef();
+  this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange = event => {
-    const { name, value } = event.target;
+    let input = this.initialState.input;
+    input[event.target.name] = event.target.value;
 
     this.setState({
-        [name] : value
+        input
     });
 }
 
   handleSubmit = (event) => {
-    alert('A name was submitted: ' + this.input.current.value);
     event.preventDefault();
+    
+    let input = {};
+    input["name"] = "";
+    input["password"] = "";
+    this.setState({input:input});
+
+    alert('lomake on lähetetty');
+  }
+
+  validate(){
+      let input = this.initialState.input;
+      let errors = {};
+      let isValid = true;
+
+      if(!input["name"]) {
+          isValid = false;
+          errors["name"] = "Please enter ypur name";
+      }
+
+      if(!input["password"]) {
+          isValid = false;
+          errors["password"] = "please enter your password";
+      }
+
+      this.setState({
+        errors: errors
+      });
+
+      return isValid;
   }
 
 
@@ -59,7 +88,7 @@ class Login extends Component {
                         </div>
                         <div class="row">
                             <Link to="game">
-                                <button type="submit" class="btn btn-primary btn-ghost" onSubmit={this.onFormSubmit} value="submit">
+                                <button type="submit" class="btn btn-primary btn-ghost" onSubmit={this.handleSubmit} value="submit">
                                     Kirjaudu sisään
                                 </button>
                             </Link>
