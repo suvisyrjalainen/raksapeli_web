@@ -19,6 +19,7 @@
   "homepage": "https://github.com/suvisyrjalainen/raksapeli_web#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "react-unity-webgl": "^8.0.2"
   }
 }
