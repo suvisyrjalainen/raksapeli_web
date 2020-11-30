@@ -22,8 +22,8 @@ class Game extends Component {
         return (
             <div class="game">
                 <h2>Game scene</h2>
+                <p>gaming is fun</p>
                 <div class="column">
-                    <p>gaming is fun</p>
                     <Unity unityContext={this.unityContext} />;
                 </div>
             </div>
