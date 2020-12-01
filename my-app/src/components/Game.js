@@ -11,10 +11,10 @@ class Game extends Component {
         // paths are relative from your index file.
 
         this.unityContext = new UnityContext({
-          loaderUrl: "unity/Build/WebglZippaamaton.loader.js",
-          dataUrl: "unity/Build/WebglZippaamaton.data",
-          frameworkUrl: "unity/Build/WebglZippaamaton.framework.js",
-          codeUrl: "unity/Build/WebglZippaamaton.wasm"
+          loaderUrl: "WebglZippaamaton/Build/WebglZippaamaton.loader.js",
+          dataUrl: "WebglZippaamaton/Build/WebglZippaamaton.data",
+          frameworkUrl: "WebglZippaamaton/Build/WebglZippaamaton.framework.js",
+          codeUrl: "WebglZippaamaton/Build/WebglZippaamaton.wasm"
         });
       }
 
