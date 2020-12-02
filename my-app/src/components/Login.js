@@ -4,7 +4,7 @@ import {Link, Redirect, useLocation } from "react-router-dom";
 class Login extends Component {
   constructor(props) {
     super(props);
-    
+
     this.initialState = {
         input: {},
         errors: {}
@@ -26,7 +26,7 @@ class Login extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    
+
     let input = {};
     input["name"] = "";
     input["password"] = "";
@@ -62,28 +62,28 @@ class Login extends Component {
     const { name, password } = this.state;
 
         return (
-            <div class="login-box">
+            <div className="login-box">
                 <form onSubmit={this.onFormSubmit} method="POST">
-                    <div class="row">
+                    <div className="row">
                         <h1>Kirjaudu</h1>
-                        <div class="user-box">
+                        <div className="user-box">
                             <input
                                 type="text"
                                 name="name"
                                 id="name"
                                 placeholder="Nimi"
                                 value={name}
-                                onChange={this.handleChange} 
+                                onChange={this.handleChange}
                                 required />
                         </div>
-                        <div class="user-box">
+                        <div className="user-box">
                             <input
                                 type="password"
                                 name="password"
                                 id="password"
-                                placeholder="Salasana" 
+                                placeholder="Salasana"
                                 value={password}
-                                onChange={this.handleChange} 
+                                onChange={this.handleChange}
                                 required />
                         </div>
                         <div class="row">

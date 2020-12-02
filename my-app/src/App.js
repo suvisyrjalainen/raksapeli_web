@@ -4,6 +4,7 @@ import Game from './components/Game';
 import Login from './components/Login';
 import RegisterForm from './components/RegisterForm';
 
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -33,8 +34,6 @@ class App extends Component {
 
 
     render() {
-
-
         return (
           <div>
             <header>
@@ -49,6 +48,9 @@ class App extends Component {
                 <li>
                   <Link to="/about">Tietoa meistä</Link>
                 </li>
+                <li>
+                  <Link to="/game">peli</Link>
+                </li>
 
               </ul>
 
@@ -57,7 +59,7 @@ class App extends Component {
                   <About />
                 </Route>
                 <Route path="/game">
-                  <Game />
+                  <Game_page />
                 </Route>
                 <Route path="/registerpage">
                   <Register_page />
@@ -98,7 +100,7 @@ function Login_page() {
 
 function Game_page() {
   return (
-    <div class="game">
+    <div className="game">
       <Game />
     </div>
   );
@@ -106,7 +108,7 @@ function Game_page() {
 
 function About_page() {
   return (
-    <div class="about">
+    <div className="about">
       <About />
     </div>
   );
