@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link, Redirect, useLocation } from "react-router-dom";
 import Unity, { UnityContext } from "react-unity-webgl";
 
 class Game extends Component {
@@ -20,11 +19,9 @@ class Game extends Component {
 
     render() {
         return (
-            <div class="game">
-                <h2>Game scene</h2>
-                <p>gaming is fun</p>
-                <div class="column">
-                    <Unity unityContext={this.unityContext} />;
+            <div>
+                <div className="game">
+                        <Unity unityContext={this.unityContext} />;
                 </div>
             </div>
         );

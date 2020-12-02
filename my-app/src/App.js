@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -69,7 +70,7 @@ class App extends Component {
           </Router>
 
           <footer>
-            <div class="footer">
+            <div className="footer">
             </div>
           </footer>
           </div>
