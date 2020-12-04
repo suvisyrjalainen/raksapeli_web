@@ -28,9 +28,19 @@ export class Game extends React.Component {
     // the Unity context through the props.
 
     return(
-      <div>
-      <h1>Tässä pitäisi olla peli</h1>
-      <Unity unityContext={this.unityContext} />
+      <div class="container">
+          <div class="col-sm">
+            <h3>ohjeet:</h3>
+          </div>
+
+          <div class="col-sm">
+            <h1>Tässä pitäisi olla peli</h1>
+            <Unity unityContext={this.unityContext} />
+          </div>
+
+          <div class="col-sm">
+            <h3>Pisteesi:</h3>
+          </div>
       </div>
     );
   }
