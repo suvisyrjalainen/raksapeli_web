@@ -29,16 +29,16 @@ export class Game extends React.Component {
 
     return(
       <div class="container">
-          <div class="col-sm">
+          <div class="instructions">
             <h3>ohjeet:</h3>
           </div>
 
-          <div class="col-sm">
+          <div class="game">
             <h1>Tässä pitäisi olla peli</h1>
             <Unity unityContext={this.unityContext} />
           </div>
 
-          <div class="col-sm">
+          <div class="score">
             <h3>Pisteesi:</h3>
           </div>
       </div>
