@@ -31,15 +31,23 @@ export class Game extends React.Component {
       <div class="container">
           <div class="instructions">
             <h3>ohjeet:</h3>
+            <p>Liikkuminen W, ja S</p>
+            <h4>Pelin kulku:</h4>
+            <p>pelaat quiz tyyppistä peliä jossa</p>
+            <p>vastailet rakennustyömaa aiheisiin kysymyksiin</p>
+            <p>Jokaisesta oikesta vastauksesta saat 1 pisteen</p>
+            <p>gl hf :).</p>
+          </div>
+
+          <div class="score">
+            <h3>pisteesi:</h3>
+            <p>mikko:
+            pisteesi: 10/10.</p>
           </div>
 
           <div class="game">
             <h1>Tässä pitäisi olla peli</h1>
             <Unity unityContext={this.unityContext} />
-          </div>
-
-          <div class="score">
-            <h3>Pisteesi:</h3>
           </div>
       </div>
     );
