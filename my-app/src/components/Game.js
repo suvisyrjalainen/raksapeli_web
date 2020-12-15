@@ -22,8 +22,6 @@ export class Game extends React.Component {
   }
 
 
-
-  
   render() {
 
     // Finally render the Unity component and pass
