@@ -39,6 +39,8 @@ export class Game extends React.Component {
             <p>gl hf :).</p>
           </div>
 
+          
+
           <div class="score">
             <h3>pisteesi:</h3>
             <p>mikko:

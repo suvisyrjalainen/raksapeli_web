@@ -76,6 +76,7 @@ class Login extends Component {
                                 onChange={this.handleChange}
                                 required />
                         </div>
+                        
                         <div className="user-box">
                             <input
                                 type="password"
